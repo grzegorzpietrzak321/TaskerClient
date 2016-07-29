@@ -26,9 +26,6 @@ namespace TaskerClient.TaskerReference {
         private System.DateTime CreateDateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool IsFinishedField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime deadlineDateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -36,6 +33,9 @@ namespace TaskerClient.TaskerReference {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool isFinishedField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string nameField;
@@ -62,19 +62,6 @@ namespace TaskerClient.TaskerReference {
                 if ((this.CreateDateField.Equals(value) != true)) {
                     this.CreateDateField = value;
                     this.RaisePropertyChanged("CreateDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IsFinished {
-            get {
-                return this.IsFinishedField;
-            }
-            set {
-                if ((this.IsFinishedField.Equals(value) != true)) {
-                    this.IsFinishedField = value;
-                    this.RaisePropertyChanged("IsFinished");
                 }
             }
         }
@@ -119,6 +106,19 @@ namespace TaskerClient.TaskerReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool isFinished {
+            get {
+                return this.isFinishedField;
+            }
+            set {
+                if ((this.isFinishedField.Equals(value) != true)) {
+                    this.isFinishedField = value;
+                    this.RaisePropertyChanged("isFinished");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string name {
             get {
                 return this.nameField;
@@ -158,12 +158,6 @@ namespace TaskerClient.TaskerReference {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TaskerReference.ITaskerService")]
     public interface ITaskerService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskerService/DoWork", ReplyAction="http://tempuri.org/ITaskerService/DoWorkResponse")]
-        void DoWork();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskerService/DoWork", ReplyAction="http://tempuri.org/ITaskerService/DoWorkResponse")]
-        System.Threading.Tasks.Task DoWorkAsync();
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskerService/CreateTask", ReplyAction="http://tempuri.org/ITaskerService/CreateTaskResponse")]
         bool CreateTask(TaskerClient.TaskerReference.Task t);
         
@@ -188,11 +182,11 @@ namespace TaskerClient.TaskerReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskerService/ShowTask", ReplyAction="http://tempuri.org/ITaskerService/ShowTaskResponse")]
         System.Threading.Tasks.Task<string> ShowTaskAsync(int taskId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskerService/GetTask", ReplyAction="http://tempuri.org/ITaskerService/GetTaskResponse")]
-        string GetTask(int priorityId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskerService/GetTasks", ReplyAction="http://tempuri.org/ITaskerService/GetTasksResponse")]
+        string GetTasks(int priorityId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskerService/GetTask", ReplyAction="http://tempuri.org/ITaskerService/GetTaskResponse")]
-        System.Threading.Tasks.Task<string> GetTaskAsync(int priorityId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskerService/GetTasks", ReplyAction="http://tempuri.org/ITaskerService/GetTasksResponse")]
+        System.Threading.Tasks.Task<string> GetTasksAsync(int priorityId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -220,14 +214,6 @@ namespace TaskerClient.TaskerReference {
         
         public TaskerServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        public void DoWork() {
-            base.Channel.DoWork();
-        }
-        
-        public System.Threading.Tasks.Task DoWorkAsync() {
-            return base.Channel.DoWorkAsync();
         }
         
         public bool CreateTask(TaskerClient.TaskerReference.Task t) {
@@ -262,12 +248,12 @@ namespace TaskerClient.TaskerReference {
             return base.Channel.ShowTaskAsync(taskId);
         }
         
-        public string GetTask(int priorityId) {
-            return base.Channel.GetTask(priorityId);
+        public string GetTasks(int priorityId) {
+            return base.Channel.GetTasks(priorityId);
         }
         
-        public System.Threading.Tasks.Task<string> GetTaskAsync(int priorityId) {
-            return base.Channel.GetTaskAsync(priorityId);
+        public System.Threading.Tasks.Task<string> GetTasksAsync(int priorityId) {
+            return base.Channel.GetTasksAsync(priorityId);
         }
     }
 }

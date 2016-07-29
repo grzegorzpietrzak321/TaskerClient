@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="kThXzbZIbRk4uLgxRvwTxjGowv8=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="i7hnjVcMJ7uBl2XRVEbt7WVESq0=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_ITaskerService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_ITaskerService" contract="TaskerReference.ITaskerService" bindingType="basicHttpBinding" address="http://localhost:60224/TaskerService.svc" bindingConfiguration="BasicHttpBinding_ITaskerService">
+    <endpoint name="BasicHttpBinding_ITaskerService" contract="TaskerReference.ITaskerService" bindingType="basicHttpBinding" address="http://gpietrzak.pl/TaskerService.svc" bindingConfiguration="BasicHttpBinding_ITaskerService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:60224/TaskerService.svc</serializedValue>
+          <serializedValue>http://gpietrzak.pl/TaskerService.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ac97d9a2-7460-4439-99c9-e6b661c80649" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bed45470-15b4-485a-b935-a29fdf292f9a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,13 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:60224/TaskerService.svc?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://gpietrzak.pl/TaskerService.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="TaskerService.wsdl" MetadataType="Wsdl" ID="e0eb5f29-0150-4f00-aae3-2ce916f9acf3" SourceId="1" SourceUrl="http://localhost:60224/TaskerService.svc?wsdl" />
-    <MetadataFile FileName="TaskerService.xsd" MetadataType="Schema" ID="7de93f59-a7e0-408c-a3a2-041f6c902f63" SourceId="1" SourceUrl="http://localhost:60224/TaskerService.svc?xsd=xsd1" />
-    <MetadataFile FileName="TaskerService1.xsd" MetadataType="Schema" ID="8e76f3dc-dc0c-4e76-8732-66203cc1c837" SourceId="1" SourceUrl="http://localhost:60224/TaskerService.svc?xsd=xsd0" />
-    <MetadataFile FileName="TaskerService2.xsd" MetadataType="Schema" ID="3e589c2c-4f65-495f-98be-d56ae13f67f4" SourceId="1" SourceUrl="http://localhost:60224/TaskerService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TaskerService.xsd" MetadataType="Schema" ID="8df73f68-63a1-4e4b-8f2b-3f7fa9bdf8c6" SourceId="1" SourceUrl="http://gpietrzak.pl/TaskerService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TaskerService1.xsd" MetadataType="Schema" ID="81151d78-b373-4b7b-80cc-c7a45b12c876" SourceId="1" SourceUrl="http://gpietrzak.pl/TaskerService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TaskerService.wsdl" MetadataType="Wsdl" ID="922285e5-a9b4-439b-bfd6-496dbb4e6562" SourceId="1" SourceUrl="http://gpietrzak.pl/TaskerService.svc?wsdl" />
+    <MetadataFile FileName="TaskerService2.xsd" MetadataType="Schema" ID="e538a767-3c4c-407f-8125-1c3af7f4f1a9" SourceId="1" SourceUrl="http://gpietrzak.pl/TaskerService.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

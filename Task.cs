@@ -6,19 +6,34 @@ using System.Threading.Tasks;
 
 namespace TaskerClient
 {
-    class Task
+    public class Task
     {
-        int id { get; set; }
-        string name { get; set; }
-        string description { get; set; }
-        int priority { get; set; }
-        DateTime createDate { get; set; }
-        DateTime deadlineDate { get; set; }
-        bool isFinished = false;
-        public bool IsFinished
+        public int id { get; set; }
+
+        public string name { get; set; }
+
+        public string description { get; set; }
+
+        public int priority { get; set; }
+
+        public DateTime deadlineDate { get; set; }
+
+        public bool isFinished { get; set; }
+
+        public DateTime CreateDate;
+
+        public Task(string name, string description, int priority, DateTime deadlineDate)
         {
-            get { return isFinished; }
-            set { isFinished = value; }
+            this.name = name;
+            this.description = description;
+            this.priority = priority;
+            this.deadlineDate = deadlineDate;
+        }
+
+        public Task()
+        {
+
         }
     }
 }
+
