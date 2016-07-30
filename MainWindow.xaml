@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TaskerClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="609" Width="812">
+        Title="Tasker" Height="609" Width="812" Background="#FFC7C7C7" ResizeMode="NoResize" Icon="Icon1.ico" BorderBrush="#FFCBCBCB">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5"/>

@@ -7,10 +7,12 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MessageBox = System.Windows.MessageBox;
 
 namespace TaskerClient
 {
@@ -83,10 +85,20 @@ namespace TaskerClient
 
         private void bnt_FinishTask_Click(object sender, RoutedEventArgs e)
         {
-            TaskerServ taskerServ = new TaskerServ();
-            int id = Int32.Parse(txb_taskIdHidden.Text);
-            taskerServ.FinishTask(id);
-            this.Close();
+            MessageBoxResult dialogResult = MessageBox.Show("Really?", "Question", MessageBoxButton.YesNoCancel);
+
+            if (dialogResult == MessageBoxResult.Yes)
+            {
+                TaskerServ taskerServ = new TaskerServ();
+                int id = Int32.Parse(txb_taskIdHidden.Text);
+                taskerServ.FinishTask(id);
+                this.Close();
+            }
+            if (dialogResult == MessageBoxResult.No)
+            {
+                this.Close();
+            }
+            
         }
     }
 }
