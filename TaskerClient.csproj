@@ -113,14 +113,14 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="Service References\TaskerReference\TaskerService.wsdl" />
-    <None Include="Service References\TaskerReference\TaskerService.xsd">
+    <None Include="Service References\TaskerReference\TaskerService1.wsdl" />
+    <None Include="Service References\TaskerReference\TaskerService3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\TaskerReference\TaskerService1.xsd">
+    <None Include="Service References\TaskerReference\TaskerService31.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\TaskerReference\TaskerService2.xsd">
+    <None Include="Service References\TaskerReference\TaskerService32.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
