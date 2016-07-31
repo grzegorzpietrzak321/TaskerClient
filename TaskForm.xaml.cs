@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -65,7 +66,8 @@ namespace TaskerClient
                 
                 taskerServ.EditTask(CreateTaskFromReference());
             }
-
+            
+            taskerServ.Close();
             this.Close();
         }
 
@@ -92,6 +94,7 @@ namespace TaskerClient
                 TaskerServ taskerServ = new TaskerServ();
                 int id = Int32.Parse(txb_taskIdHidden.Text);
                 taskerServ.FinishTask(id);
+                taskerServ.Close();
                 this.Close();
             }
             if (dialogResult == MessageBoxResult.No)

@@ -66,6 +66,7 @@ namespace TaskerClient
             {
                 dtgrid_3.Items.Add(task);
             }
+            taskerServ.Close();
         }
 
         private void btnAddTask_Click(object sender, RoutedEventArgs e)
