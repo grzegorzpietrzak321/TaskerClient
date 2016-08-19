@@ -25,8 +25,13 @@ namespace TaskerClient
         public MainWindow()
         {
             InitializeComponent();
-            refreshTasks();
+            if (_contentLoaded)
+            {
+                refreshTasks();
+            }
         }
+
+        
 
         public void refreshTasks()
         {

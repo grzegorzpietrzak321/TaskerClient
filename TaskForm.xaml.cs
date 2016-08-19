@@ -34,12 +34,8 @@ namespace TaskerClient
                 deadline = DateTime.Now;
             }
             
-
             InitializeComponent();
 
-            
-
-            
             txb_name.Text = t.name;
             txb_description.Text = t.description;
             cmb_priorityId.SelectedIndex = t.priority;
